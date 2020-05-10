@@ -1,0 +1,34 @@
+<!--pages/turn/turn.wxml-->
+<view >
+    <!-- <navigator class='arrow' open-type='redirect' url='/pages/index/index'></navigator> -->
+    <view class='bg'>
+        <image src='../../images/turn_bg.jpg'></image>
+        <view class='top'>
+            <image src='../../images/turn_top.png'></image>
+            <block>
+                <text>第{{index+1}}题</text>
+                <view>{{title}}</view>
+            </block>
+        </view>
+        <view class='center'>
+            <view class='result scale' bindtap='show'>
+                <image src='../../images/turn_yellow.png'></image>
+                <button >查看结果</button>
+            </view>
+            <view class='next' bindtap='next'>
+                <image src='../../images/turn_orange.png'></image>
+                <button>下一题</button>
+            </view>
+            <view class='share scale'>
+                <image src='../../images/turn_green.png'></image>
+                <button open-type='share'>分享群友猜猜</button>
+            </view>
+        </view>
+        <view class='bot'>
+            <image wx:if='{{ok_show}}' src='../../images/turn-bot.png'></image>
+            <block>
+                <view>{{ok_show}}</view>
+            </block>
+        </view>
+    </view>
+</view>

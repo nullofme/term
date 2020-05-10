@@ -1,0 +1,71 @@
+<!--pages/riddle/riddle.wxml-->
+<view class='container'>
+  <!-- <navigator class='arrow' open-type='redirect' url='/pages/index/index'></navigator>
+    <view class='com_title'>猜谜语</view> -->
+  <view wx:if='{{errFlag}}' class='layer'>
+    <view class='error_box'>
+      <image src='../../images/error.png'></image>
+      <view class='error_content'>主子，您答错了</view>
+      <view class='btns'>
+        <button bindtap='repeat'>重新答题</button>
+        <button open-type='share' class="scale">发给群友猜猜</button>
+      </view>
+    </view>
+  </view>
+  <view wx:if='{{wellFlag}}' class='layer'>
+    <view class='well_box'>
+      <image src='../../images/well.png'></image>
+      <view class='well_content'>恭喜您，答对啦</view>
+      <view class='btns'>
+        <button bindtap='next'>下一题</button>
+        <button open-type='share' class="scale">发给群友猜猜</button>
+      </view>
+    </view>
+  </view>
+  <image class='bg' src='../../images/rid_bg.png'></image>
+  <view class='top'>
+    <image class='top_bg' src='../../images/rid_top.png'></image>
+    <view class='content'>
+      <view class='mark'>第{{index+1}}题</view>
+      <view class='title1'>{{title_top}}</view>
+      <view class='title2'>{{title_bot}}</view>
+    </view>
+    <view class='book'>
+      <text class='sw'>声望:</text>
+      <text class='num'>{{num}}</text>
+      <image class='book_bg' src='../../images/rid_book.png'></image>
+    </view>
+  </view>
+  <view class='center'>
+    <view class='two rotate'>
+      <button open-type='share' data-msg='求助'>求助</button>
+      <image src='../../images/rid_red.png'></image>
+    </view>
+    <view class='one'>
+      <button bindtap='see'>提示</button>
+      <image src='../../images/rid_blue.png'></image>
+    </view>
+
+    <view class='three rotate'>
+      <button open-type='share' data-msg='求助'>分享</button>
+      <image src='../../images/rid_green.png'></image>
+    </view>
+    <view class='four'>
+      <button bindtap='next'>下题</button>
+      <image src='../../images/rid_yellow.png'></image>
+    </view>
+  </view>
+  <view class='result'>
+    <block wx:for='{{choose}}'>
+      <view class='result_item'>{{item}}</view>
+    </block>
+  </view>
+  <view class='options'>
+    <block wx:for='{{options}}'>
+      <view class='oprions_item'>
+        <image src='../../images/rid_paper.png'></image>
+        <text bindtap='answer' data-word='{{item}}'>{{item}}</text>
+      </view>
+    </block>
+  </view>
+</view>

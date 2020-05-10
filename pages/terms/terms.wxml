@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class='container'>
+    <!-- <navigator class='arrow' open-type='redirect' url='/pages/index/index'></navigator>
+    <view class='com_title'>猜成语</view> -->
+    <view wx:if='{{errFlag}}' class='layer'>
+        <view class='error_box'>
+            <image src='../../images/error.png'></image>
+            <view class='error_content'>主子，您答错了</view>
+            <view class='btns'>
+                <button bindtap='repeat'>重新答题</button>
+                <button open-type='share' class="scale">发给群友猜猜</button>
+            </view>
+        </view>
+    </view>
+    <view wx:if='{{wellFlag}}' class='layer'>
+        <view class='well_box'>
+            <image src='../../images/well.png'></image>
+            <view class='well_content'>恭喜您，答对啦</view>
+            <view class='btns'>
+                <button bindtap='next'>下一题</button>
+                <button open-type='share' class="scale">发给群友猜猜</button>
+            </view>
+        </view>
+    </view>
+    <block>
+        <view class='box'>
+            <view wx:if='{{showNum}}' class='level'>您的当前的分数：{{num}}</view>
+            <image src='../../images/ss.png' class='box_bg'></image>
+            <view class='ul_x' style='top:{{x_top}}'>
+                <view class='li_x' wx:for='{{x}}'>
+                    {{item}}
+                    <image src='../../images/ss_bg.png' class='xx'></image>
+
+                </view>
+            </view>
+            <view class='ul_y' style='left:{{y_left}}'>
+                <block wx:for='{{y}}'>
+                    <view wx:if='{{item==" "}}' class='li_y li_no'>
+                        {{word}}
+                        <!-- <image src='../../images/t_bg.png'></image> -->
+                    </view>
+                    <view wx:else class='li_y '>
+                        {{item}}
+                        <image src='../../images/ss_bg.png' class='xx'></image>
+                    </view>
+                </block>
+
+            </view>
+        </view>
+        <view class='option'>
+            <view class='option_item' wx:for='{{options}}'>
+                <image src='../../images/s_bg.png'></image>
+                <view bindtap='answer' data-word='{{item}}'>{{item}}</view>
+            </view>
+        </view>
+    </block>
+    <button class="btn_share scale" open-type='share'>发给群友一起猜</button>
+    <image src='../../images/bg.png' class='bg'></image>
+</view>

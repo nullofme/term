@@ -1,0 +1,75 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.4",
+	"appid": "wxf220adf9f4e06db9",
+	"projectname": "%E8%AF%8D%E8%AF%AD%E7%8C%9C%E5%91%80%E7%8C%9C",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 2,
+			"list": [
+				{
+					"id": -1,
+					"name": "猜词语",
+					"pathName": "pages/terms/terms",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "猜谜语",
+					"pathName": "pages/riddle/riddle",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "1",
+					"pathName": "pages/turn/turn",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "脑筋急转弯",
+					"pathName": "pages/turn/turn",
+					"scene": null
+				}
+			]
+		}
+	}
+}

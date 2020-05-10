@@ -1,0 +1,15 @@
+<!--pages/enter/enter.wxml-->
+<view class='container'>
+    <image class='bg' src='../../images/index_bg.png'></image>
+    <view class='top'>
+        <image src='../../images/index_top.png'></image>
+        <button open-type='share'>一起猜猜猜</button>
+    </view>
+    <view class='biao'>
+    <image src='../../images/index_biao.png'></image>
+   
+    <view class='toRiddle' bindtap='toTerms' >猜成语</view>
+    <view class='toTurn' bindtap='toTurn'>脑筋急转弯</view>
+     <view class='toTerms' bindtap='toRiddle'>猜谜语</view>
+    </view>
+</view>

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    
+    "pages/terms/terms",
+    "pages/riddle/riddle",
+    "pages/turn/turn"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "disableScroll": true
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "list": [
+      {
+        "iconPath": "images/11.png",
+        "selectedIconPath": "images/12.png",
+        "pagePath": "pages/terms/terms",
+        "text": "猜成语"
+      },
+      {
+        "iconPath": "images/21.png",
+        "selectedIconPath": "images/22.png",
+        "pagePath": "pages/riddle/riddle",
+        "text": "猜谜语"
+      },
+      {
+        "iconPath": "images/31.png",
+        "selectedIconPath": "images/32.png",
+        "pagePath": "pages/turn/turn",
+        "text": "脑筋急转弯"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
